@@ -1,0 +1,54 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+.gradient-text {
+    background: linear-gradient(90deg, #ffffff, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.card {
+    background-color: #2a2a2a;
+    border-radius: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.tech-icon {
+    transition: transform 0.3s;
+}
+.tech-icon:hover {
+    transform: scale(1.2);
+}
+.tech-icon i {
+    font-size: 1.5rem; /* 24px */
+    color: #f0f0f0;
+}
+.finisher-header {
+    height: 200px;
+    pointer-events: none;
+}
+/* Styles for the header and interactive canvas */
+.interactive-header {
+    position: relative;
+    text-align: center;
+    padding: 4rem 0;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+#header-canvas-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+#dot-grid-canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}

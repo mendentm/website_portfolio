@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thomas Mendenhall - AI & Software Developer</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Devicon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    
+    <!-- Link to your external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased">
+
+    <!-- Header Section -->
+    <div class="header finisher-header">
+        <div class="container mx-auto p-4 md:p-8 h-full flex items-center justify-center">
+            <div class="relative z-10 text-center">
+                <h1 class="text-5xl md:text-7xl font-bold">
+                    <span class="gradient-text">Thomas Mendenhall</span>
+                </h1>
+                <p class="mt-4 text-xl md:text-2xl text-gray-400">AI & Software Developer</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mx-auto p-4 md:p-8">
+        <!-- Mission Statement -->
+        <section id="mission" class="my-16">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-4">My Mission</h2>
+                <p class="text-lg text-gray-300">
+                    A results-oriented software developer with a specialization in Artificial Intelligence. My goal is to apply a strong foundation in machine learning, Python, and data pipelines to solve complex challenges. I am passionate about contributing to innovative, AI-driven solutions and building intelligent systems that are efficient, ethical, and user-friendly.
+                </p>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="my-16">
+            <h2 class="text-3xl font-bold text-center mb-12">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold mb-2">AI Weather Modeling Workflow</h3>
+                    <p class="text-gray-400 mb-4">During my internship at Oak Ridge National Laboratory, I refactored and optimized a Python-based workflow for weather modeling, significantly improving the speed and efficiency of data processing for climate simulation tasks.</p>
+                    <a href="#" class="text-indigo-400 hover:text-indigo-300">View Project &rarr;</a>
+                </div>
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold mb-2">Computer Vision for Control Systems</h3>
+                    <p class="text-gray-400 mb-4">I implemented a system using OpenCV to detect and track objects in a video stream, which triggered automated responses based on the object's real-time location. This project showcased skills in computer vision and system automation.</p>
+                    <a href="#" class="text-indigo-400 hover:text-indigo-300">View Project &rarr;</a>
+                </div>
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold mb-2">Natural Language Processing App</h3>
+                    <p class="text-gray-400 mb-4">This project involved building an application to perform sentiment analysis on text data. Key tasks included data tokenization, stemming, and leveraging NLP libraries to classify text accurately.</p>
+                    <a href="#" class="text-indigo-400 hover:text-indigo-300">View Project &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technologies Section -->
+        <section id="technologies" class="my-16">
+            <h2 class="text-3xl font-bold text-center mb-12">Technologies I Use</h2>
+            <div class="flex justify-center flex-wrap gap-8">
+                <div class="tech-icon text-center">
+                    <i class="devicon-python-plain"></i>
+                    <p>Python</p>
+                </div>
+                <div class="tech-icon text-center">
+                    <i class="devicon-tensorflow-original"></i>
+                    <p>TensorFlow</p>
+                </div>
+                <div class="tech-icon text-center">
+                    <i class="devicon-pytorch-plain"></i>
+                    <p>PyTorch</p>
+                </div>
+                <div class="tech-icon text-center">
+                    <i class="devicon-numpy-original"></i>
+                    <p>Scikit-learn</p>
+                </div>
+                 <div class="tech-icon text-center">
+                    <i class="devicon-mysql-plain"></i>
+                    <p>SQL</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="my-16 text-center">
+            <h2 class="text-3xl font-bold mb-4">Get In Touch</h2>
+            
+            <div class="flex justify-center gap-4">
+                <button id="openModalBtn" class="bg-orange-800 hover:bg-orange-700 text-white font-bold py-4 px-8 rounded-lg transition text-lg">
+                    Email
+                </button>
+                <a href="https://www.linkedin.com/in/thomas-mendenhall-tm/" target="_blank" rel="noopener noreferrer" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg transition text-lg inline-block">
+                    LinkedIn
+                </a>
+            </div>
+
+            <p class="text-gray-500 mt-4">
+                Email: <strong>mendentm@gmail.com</strong>
+            </p>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center py-8 text-gray-500">
+            <p>&copy; 2025 Thomas Mendenhall. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/InertiaPlugin.min.js"></script>
+
+    <!-- Link to your external JavaScript file -->
+    <script src="script.js"></script>
+    <script src="finisher-header.es5.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    new FinisherHeader({
+      "count": 10,
+      "size": {
+        "min": 1300,
+        "max": 1500,
+        "pulse": 0
+      },
+      "speed": {
+        "x": {
+          "min": 0.1,
+          "max": 0.9
+        },
+        "y": {
+          "min": 0.1,
+          "max": 0.6
+        }
+      },
+      "colors": {
+        "background": "#9138e5",
+        "particles": [
+          "#22735d",
+          "#000000",
+          "#2235e5",
+          "#000000",
+          "#f000ff"
+        ]
+      },
+      "blending": "overlay",
+      "opacity": {
+        "center": 0.5,
+        "edge": 0.05
+      },
+      "skew": 0,
+      "shapes": [
+        "c"
+      ]
+    });
+    </script>
+
+        <!-- Formspree contact form -->
+    <div id="contactModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center p-4 z-50">
+        <div class="bg-[#2a2a2a] rounded-lg shadow-xl p-8 max-w-lg w-full relative">
+            <h2 class="text-3xl font-bold mb-4 text-white">Contact Me</h2>
+            <p class="text-gray-400 mb-6">Fill out the form below and I'll get back to you as soon as possible.</p>
+            
+            <button id="closeModal" class="absolute top-4 right-4 text-gray-400 hover:text-white">&times;</button>
+            
+            <form action="https://formspree.io/f/meokywbw" method="POST">
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-300 mb-2">Your Email</label>
+                    <input type="email" name="email" id="email" required class="w-full p-3 bg-[#1a1a1a] rounded-md border border-gray-600 text-white focus:outline-none focus:border-indigo-500">
+                </div>
+                <div class="mb-6">
+                    <label for="message" class="block text-gray-300 mb-2">Message</label>
+                    <textarea name="message" id="message" rows="5" required class="w-full p-3 bg-[#1a1a1a] rounded-md border border-gray-600 text-white focus:outline-none focus:border-indigo-500"></textarea>
+                </div>
+                <div class="text-right">
+                    <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
