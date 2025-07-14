@@ -57,6 +57,34 @@ body {
     height: 100%;
 }
 
+/*
 :is(section, div)[id]:not(#home) {
-    scroll-margin-top: 4rem; /* Adjust this value to match your nav bar height */
+    scroll-margin-top: 4rem; 
+}
+*/
+
+main {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+main > section {
+    scroll-snap-align: start;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+}
+
+.finisher-header {
+    background-image: none !important;
 }
