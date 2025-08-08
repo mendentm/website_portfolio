@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thomas Mendenhall - Creative Developer</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Custom styles for the page */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0A0A0A;
+            color: #E2E2E2;
+            cursor: none; /* Hide the default cursor */
+        }
+
+        /* Remove default pointer cursor from links and buttons */
+        a, button {
+            cursor: none !important; /* Use !important to override default browser styles */
+        }
+
+        /* The custom cursor circle */
+        #custom-cursor {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 17px; /* Reduced size by 40% */
+            height: 17px; /* Reduced size by 40% */
+            border: 2px solid #800000; /* Maroon color */
+            border-radius: 50%;
+            pointer-events: none; /* Allows clicking through the element */
+            transform: translate(-50%, -50%); /* Center the circle on the cursor's coordinates */
+            transition: transform 0.1s ease-out;
+            z-index: -1; /* Place cursor behind content */
+            will-change: transform;
+        }
+
+        /* Style for interactive links */
+        .link-hover {
+            transition: color 0.3s ease;
+        }
+        .link-hover:hover {
+            color: #22d3ee; /* Cyan hover for consistency */
+        }
+
+        /* Project item styling */
+        .project-item {
+            border-bottom: 1px solid #27272a;
+            transition: background-color 0.3s ease;
+        }
+        
+        /* New sleek hover effect for project items */
+        .project-item:hover h3,
+        .project-item:hover .arrow-icon {
+             color: #22d3ee; /* Cyan color on hover */
+        }
+
+
+        /* Animation for elements fading in on scroll */
+        .scroll-fade {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .scroll-fade.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Custom cursor element -->
+    <div id="custom-cursor"></div>
+
+    <!-- Main Content Wrapper -->
+    <div class="relative z-10 max-w-4xl mx-auto px-6 py-24 md:py-32">
+
+        <!-- Header Section -->
+        <header class="scroll-fade">
+            <h1 class="text-4xl md:text-5xl font-bold text-white">Thomas Mendenhall</h1>
+            <p class="mt-2 text-lg md:text-xl text-zinc-400">AI & Software Developer</p>
+            
+            <!-- Navigation / Social Links -->
+            <nav class="flex items-center gap-6 mt-8">
+                <a href="https://github.com/mendentm" target="_blank" rel="noopener noreferrer" class="text-zinc-300 link-hover">GitHub</a>
+                <a href="https://www.linkedin.com/in/thomas-mendenhall-tm/" target="_blank" rel="noopener noreferrer" class="text-zinc-300 link-hover">LinkedIn</a>
+                <button id="openModalBtn" class="text-zinc-300 link-hover">Contact</button>
+            </nav>
+        </header>
+
+        <!-- About Section -->
+        <section class="mt-20 md:mt-24 scroll-fade" style="transition-delay: 100ms;">
+            <p class="text-zinc-300 leading-relaxed max-w-2xl">
+                I'm passionate about leveraging artificial intelligence to build innovative solutions that solve real-world problems. My focus is on creating intelligent systems that are not only efficient but also ethical and user-friendly.
+            </p>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="mt-20 md:mt-24">
+            <!-- Project 1 -->
+            <div class="project-item py-8 scroll-fade" style="transition-delay: 200ms;">
+                <a href="#" class="block">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h3 class="text-xl font-medium text-white transition-colors duration-300">AI-Powered Recommendation Engine</h3>
+                            <p class="mt-2 text-zinc-400">A personalized content discovery platform using collaborative filtering.</p>
+                        </div>
+                        <span class="arrow-icon text-zinc-500 transition-colors duration-300 hidden md:block">&rarr;</span>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="project-item py-8 scroll-fade" style="transition-delay: 300ms;">
+                <a href="#" class="block">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h3 class="text-xl font-medium text-white transition-colors duration-300">Real-time Data Visualization</h3>
+                            <p class="mt-2 text-zinc-400">An interactive dashboard for visualizing complex datasets on the fly.</p>
+                        </div>
+                        <span class="arrow-icon text-zinc-500 transition-colors duration-300 hidden md:block">&rarr;</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-item py-8 scroll-fade" style="transition-delay: 400ms;">
+                <a href="#" class="block">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h3 class="text-xl font-medium text-white transition-colors duration-300">Ethical AI Framework</h3>
+                            <p class="mt-2 text-zinc-400">A set of guidelines and tools to promote fairness and transparency in ML models.</p>
+                        </div>
+                        <span class="arrow-icon text-zinc-500 transition-colors duration-300 hidden md:block">&rarr;</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+        
+        <!-- Technologies Section -->
+        <section class="mt-20 md:mt-24 scroll-fade" style="transition-delay: 500ms;">
+             <h2 class="text-lg font-medium text-white">Technologies I Work With</h2>
+             <p class="mt-4 text-zinc-400 max-w-2xl">
+                 Python, PyTorch, TensorFlow, Scikit-learn, JavaScript, React, Node.js, SQL, and various cloud platforms.
+             </p>
+        </section>
+
+        <!-- Footer -->
+        <footer class="mt-20 md:mt-32 text-center text-zinc-500 scroll-fade" style="transition-delay: 600ms;">
+            <p>&copy; 2025 Thomas Mendenhall. Crafted with care.</p>
+        </footer>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="fixed inset-0 bg-black bg-opacity-70 hidden flex items-center justify-center p-4 z-50">
+        <div class="bg-[#18181b] rounded-lg shadow-xl p-8 max-w-lg w-full relative border border-zinc-700">
+            <h2 class="text-3xl font-bold mb-4 text-white">Contact Me</h2>
+            <p class="text-zinc-400 mb-6">Fill out the form below and I'll get back to you as soon as possible.</p>
+            <button id="closeModal" class="absolute top-4 right-4 text-zinc-400 hover:text-white text-3xl leading-none">&times;</button>
+            <form action="https://formspree.io/f/meokywbw" method="POST">
+                <div class="mb-4">
+                    <label for="email" class="block text-zinc-300 mb-2">Your Email</label>
+                    <input type="email" name="email" id="email" required class="w-full p-3 bg-[#0A0A0A] rounded-md border border-zinc-600 text-white focus:outline-none focus:border-red-700">
+                </div>
+                <div class="mb-6">
+                    <label for="message" class="block text-zinc-300 mb-2">Message</label>
+                    <textarea name="message" id="message" rows="5" required class="w-full p-3 bg-[#0A0A0A] rounded-md border border-zinc-600 text-white focus:outline-none focus:border-red-700"></textarea>
+                </div>
+                <div class="text-right">
+                    <button type="submit" class="bg-red-800 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg transition">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // --- Custom Cursor ---
+            const customCursor = document.getElementById('custom-cursor');
+            if (customCursor) {
+                document.addEventListener('mousemove', (e) => {
+                    // Move the center of the custom cursor to the mouse position
+                    const { clientX, clientY } = e;
+                    customCursor.style.transform = `translate(calc(${clientX}px - 50%), calc(${clientY}px - 50%))`;
+                });
+            }
+
+            // --- Scroll Fade-in Effect ---
+            const fadeElems = document.querySelectorAll('.scroll-fade');
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+            fadeElems.forEach(elem => observer.observe(elem));
+
+            // --- Contact Modal Logic ---
+            const openModalBtn = document.getElementById('openModalBtn');
+            const closeModalBtn = document.getElementById('closeModal');
+            const contactModal = document.getElementById('contactModal');
+
+            if (openModalBtn && closeModalBtn && contactModal) {
+                // Show modal
+                openModalBtn.addEventListener('click', () => {
+                    contactModal.classList.remove('hidden');
+                });
+
+                // Hide modal with close button
+                closeModalBtn.addEventListener('click', () => {
+                    contactModal.classList.add('hidden');
+                });
+
+                // Hide modal when clicking on the background overlay
+                contactModal.addEventListener('click', (e) => {
+                    if (e.target === contactModal) {
+                        contactModal.classList.add('hidden');
+                    }
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
